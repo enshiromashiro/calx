@@ -88,6 +88,7 @@ class Foo {
   method method-not-found name args {
     print "method \"" + name + "\" not found!"
     print "args: " + args.->str  # この名前パーサがめんどくさそう
+    name
   }
 }
 ; -> #<Class:Foo id:xxx>
@@ -96,9 +97,11 @@ foo = Foo.new
 foo.method1
 ; method "method1" not found in class Foo!
 ; args: []
+; -> "method1"
 foo.method2 10 "second"
 ; method "method2" not found in class Foo!
 ; args: [10 "second"]
+; -> "method2"
 ```
 
 ## Author
