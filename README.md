@@ -46,7 +46,7 @@ while count <= 5 {
 ; 500
 ; -> nil
 
-# define proc: arity = 1
+# define a proc: arity = 1
 proc add-one n {
   n + 1
 }
@@ -62,7 +62,7 @@ proc add i1 i2 {
 add 100 200
 ; -> 300
 
-# define class
+# define a class
 # `< ParentClass` is optional.
 # If a parent class is not specified defined class inherited Object by default.
 class Stone < Object {
