@@ -60,10 +60,22 @@ proc add i1 i2 {
 add 100 200
 ; -> 300
 
+;; undefine proc
+proc hi name {
+  'hi, ' + name
+}
+; -> #<Proc:hi id:xxx>
+hi "aaa"
+; hi, aaa
+; -> nil
+undef hi
+hi "aaa"
+; -> raise #<error:method-ont-found hi>
+
 ;; define a class
 ;; `< ParentClass` is optional.
 ;; If a parent class is not specified defined class inherited Object by default.
-class Stone < Object {
+class Stone : Object {
   method init self name {
     self.name = name
   }
