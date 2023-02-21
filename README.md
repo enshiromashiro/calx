@@ -3,16 +3,14 @@
 ## examples
 
 ```
-### example codes of Calx
+;;;; example codes of Calx
 
-## basics
-
-# send a message
+;; send a message
 print "hello calx"
 ; hello calx
 ; -> nil
 
-# control flow
+;; control flow
 str = "string"
 if str.length.zero? {
   print "NEVER PASSED HERE"
@@ -25,7 +23,7 @@ if str.length.zero? {
 ; long string!
 ; -> nil
 
-# loop (for each, with proc object)
+;; loop (for each, with proc object)
 ["one" "two" "three"].each (s) {
   print s
 }
@@ -34,7 +32,7 @@ if str.length.zero? {
 ; three
 ; -> nil
 
-# loop (while)
+;; loop (while)
 count = 1
 while count <= 5 {
   print count * 100
@@ -46,7 +44,7 @@ while count <= 5 {
 ; 500
 ; -> nil
 
-# define a proc: arity = 1
+;; define a proc: arity = 1
 proc add-one n {
   n + 1
 }
@@ -54,7 +52,7 @@ proc add-one n {
 add-one 100
 ; -> 101
 
-# define proc: arity = 2
+;; define proc: arity = 2
 proc add i1 i2 {
   i1 + i2
 }
@@ -62,9 +60,9 @@ proc add i1 i2 {
 add 100 200
 ; -> 300
 
-# define a class
-# `< ParentClass` is optional.
-# If a parent class is not specified defined class inherited Object by default.
+;; define a class
+;; `< ParentClass` is optional.
+;; If a parent class is not specified defined class inherited Object by default.
 class Stone < Object {
   method init self name {
     self.name = name
@@ -83,7 +81,7 @@ r.print-name
 ; ruby
 ; -> nil
 
-# Smalltalk's "DoesNotUnderstand"-like something
+;; Smalltalk's "DoesNotUnderstand"-like something
 class Foo {
   method method-not-found name args {
     print "method \"" + name + "\" not found!"
