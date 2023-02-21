@@ -10,7 +10,7 @@ print "hello calx"
 ; hello calx
 ; -> nil
 
-;; control flow
+;; conditional branching
 str = "string"
 if str.length.zero? {
   print "NEVER PASSED HERE"
