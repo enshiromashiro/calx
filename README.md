@@ -1,4 +1,4 @@
-# Calx -  a programming language
+# Calx - a programming language
 
 ## examples
 
