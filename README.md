@@ -48,7 +48,7 @@ while count <= 5 {
 proc add-one n {
   n + 1
 }
-; -> #<Proc:add-one id:xxx>
+; -> #<proc:add-one id:xxx>
 add-one 100
 ; -> 101
 
@@ -56,7 +56,7 @@ add-one 100
 proc add i1 i2 {
   i1 + i2
 }
-; -> #<Proc:add id:xxx>
+; -> #<proc:add id:xxx>
 add 100 200
 ; -> 300
 
@@ -64,7 +64,7 @@ add 100 200
 proc hi name {
   'hi, ' + name
 }
-; -> #<Proc:hi id:xxx>
+; -> #<proc:hi id:xxx>
 hi "aaa"
 ; hi, aaa
 ; -> nil
@@ -84,9 +84,9 @@ class Stone : Object {
     print name
   }
 }
-; -> #<Class:Stone id:xxx>
+; -> #<class:Stone id:xxx>
 Stone.new
-; -> raise #<error:InvalidArguments>
+; -> raise #<error:wrong-arity>
 r = Stone.new "ruby"
 ; -> #<Stone id:xxx>
 r.print-name
@@ -101,7 +101,7 @@ class Foo {
     name
   }
 }
-; -> #<Class:Foo id:xxx>
+; -> #<class:Foo id:xxx>
 foo = Foo.new
 ; -> #<Foo id:xxx>
 foo.method1
